@@ -1,33 +1,40 @@
-<project xmlns:xsi=“http://www.w3.org/2001/XMLSchema-instance” xmlns=“http://maven.apache.org/POM/4.0.0” xsi:schemaLocation=“http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd”>
+<project>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>asdf.demo.qwerty</groupId>
-  <artifactId>asdf-qwerty</artifactId>
-  <version>${revision}${changelist}${sha1}</version>
-  <packaging>jar</packaging>
-  <description>An ASDF QWERTY Example</description>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <java.version>11</java.version>
-  </properties>
+ 
+  <groupId>com.mycompany.app</groupId>
+  <artifactId>my-app</artifactId>
+  <version>1</version>
   <dependencyManagement>
-      <dependencies>
-          <dependency>
-              <groupId>org.eclipse.jetty</groupId>
-              <artifactId>jetty-bom</artifactId>
-              <version>${jetty.version}</version>
-              <type>pom</type>
-              <scope>import</scope>
-          </dependency>
-      </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-bom</artifactId>
+            <version>${jetty.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
   </dependencyManagement>
+  <properties>
+    <mavenVersion>3.0</mavenVersion>
+  </properties>
+ 
   <dependencies>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-artifact</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-core</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-    </dependency>
+    </dependency>  
   </dependencies>
 </project>
-#
