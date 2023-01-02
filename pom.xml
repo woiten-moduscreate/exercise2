@@ -16,7 +16,7 @@
     </dependencies>
   </dependencyManagement>
   <properties>
-    <mavenVersion>3.8.6</mavenVersion>
+    <mavenVersion>3.8.7</mavenVersion>
   </properties>
  
   <dependencies>
